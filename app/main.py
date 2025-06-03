@@ -31,6 +31,9 @@ class EmailPayload(BaseModel):
     body: str
     from_address: EmailStr
     from_name: str
+    date: str
+    cc: list[EmailStr] = []
+    bcc: list[EmailStr] = []
 
 
 @app.post("/send")
