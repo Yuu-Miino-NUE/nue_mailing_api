@@ -22,7 +22,7 @@ async def evaluate_api_key(api_key_header: str = Depends(api_key_header)):
     raise HTTPException(status_code=401, detail="Invalid API key")
 
 
-app = FastAPI()
+app = FastAPI(title="NUE Mailing API")
 
 
 class EmailPayload(BaseModel):
